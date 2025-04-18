@@ -15,17 +15,35 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Adrian</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
-          </p>
-        </div>
+      <h1 className="text-white text-3xl sm:text-5xl font-semibold">
+        Hi, I'm <span className="text-[#915EFF] text-2xl sm:text-4xl font-bold">Vaishali Paraskar</span>
+      </h1>
+      <p className="mt-2 text-white-100 text-sm sm:text-base leading-relaxed">
+        I am a Data Analyst <br className="sm:block hidden" />
+        I develop AI-driven solutions, statistical modeling, and data analytics
+      </p>
+    </div>
       </div>
 
-      <ComputersCanvas />
+      <div className="absolute w-full flex justify-center items-center top-[250px]">
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }}
+        >
+          <img 
+            src="/src/assets/vaishaliIMG.jpg"
+            alt="Vaishali Profile"
+            className="w-96 h-96 object-cover rounded-lg border-4 border-[#915EFF] shadow-lg hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+      </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

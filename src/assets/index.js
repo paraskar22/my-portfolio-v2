@@ -1,14 +1,18 @@
+// ========== General Assets ==========
 import logo from "./logo.svg";
+import menu from "./menu.svg";
+import close from "./close.svg";
+import github from "./github.png";
+
+// ========== Role Icons ==========
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
+// ========== Tech Stack Icons ==========
+import python from "./tech/python.png";
+import r from "./tech/r.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -18,29 +22,39 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import anaconda from "./tech/anaconda.png";
+import pycharm from "./tech/pycharm.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+// ========== Company Logos ==========
+import simplex from "./company/simplex.png";
+import advantmed from "./company/advantmed.png";
+import bisag from "./company/bisag.png";
+import cj from "./company/cj.png";
+import nirma from "./company/nirma.png";
+import liu from "./company/liu.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+// ========== Project Images ==========
+import match from "./match.png";
+import movie from "./movie.png";
+import book from "./book.png";
 
+// ========== Export All ==========
 export {
+  // General
   logo,
+  github,
+  menu,
+  close,
+
+  // Roles
   backend,
   creator,
   mobile,
   web,
-  github,
-  menu,
-  close,
-  css,
-  docker,
+
+  // Technologies
+  python,
+  r,
   figma,
   git,
   html,
@@ -50,13 +64,19 @@ export {
   reactjs,
   redux,
   tailwind,
-  typescript,
-  threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  anaconda,
+  pycharm,
+
+  // Companies
+  simplex,
+  advantmed,
+  bisag,
+  cj,
+  nirma,
+  liu,
+
+  // Projects
+  match,
+  movie,
+  book,
 };
