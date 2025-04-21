@@ -38,7 +38,7 @@ const Hero = () => {
           }}
         >
           <img 
-            src="/src/assets/vaishaliIMG.jpg"
+            src="/vaishaliIMG.jpg"
             alt="Vaishali Profile"
             className="w-96 h-96 object-cover rounded-lg border-4 border-[#915EFF] shadow-lg hover:scale-105 transition-transform duration-300"
           />
