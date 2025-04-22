@@ -5,55 +5,34 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaDiscord } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const response = await fetch("http://localhost:8080/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
-
-      if (response.ok) {
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
         setLoading(false);
-        alert("Thank you. I will get back to you as soon as possible.");
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        throw new Error("Failed to send message.");
+        alert('Message sent successfully!');
+        formRef.current.reset();
+      },
+      (error) => {
+        setLoading(false);
+        console.error('Error:', error);
+        alert('Failed to send message. Please try again later or contact me directly at paraskar06.vaishali@gmail.com');
       }
-    } catch (error) {
-      setLoading(false);
-      console.error("Error submitting form:", error);
-      alert("Something went wrong. Please try again.");
-    }
+    );
   };
 
   return (
@@ -67,29 +46,27 @@ const Contact = () => {
 
         <form
           ref={formRef}
-          onSubmit={handleSubmit}
+          onSubmit={sendEmail}
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
               type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
+              name="user_name"
               placeholder="What's your good name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
               type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
+              name="user_email"
               placeholder="What's your web address?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -97,10 +74,9 @@ const Contact = () => {
             <textarea
               rows={7}
               name="message"
-              value={form.message}
-              onChange={handleChange}
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <div className="flex justify-center">
@@ -108,6 +84,7 @@ const Contact = () => {
               type="submit"
               className={`bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary 
                 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-purple-600 active:scale-95 active:bg-purple-700`}
+              disabled={loading}
             >
               {loading ? "Sending..." : "Send"}
             </button>

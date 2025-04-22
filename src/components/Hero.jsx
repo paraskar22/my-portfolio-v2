@@ -1,12 +1,21 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
+import { Canvas } from "@react-three/fiber";
+import Stars from "./Stars";
 
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
+      {/* Stars Background */}
+      <div className="absolute inset-0 z-0">
+        <Canvas camera={{ position: [0, 0, 1] }}>
+          <Stars />
+        </Canvas>
+      </div>
+
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
@@ -25,7 +34,7 @@ const Hero = () => {
       </div>
 
       {/* Moved image to the left */}
-      <div className="absolute top-[250px] left-[18%]">
+      <div className="absolute top-[250px] left-[18%] z-10">
         <motion.div
           animate={{
             y: [0, -20, 0],
@@ -45,7 +54,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10'>
         <a href='#about'>
           <div className='w-[40px] h-[70px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div
