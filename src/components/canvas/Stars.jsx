@@ -1,46 +1,44 @@
-import { useState, useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
-import * as random from "maath/random/dist/maath-random.esm";
+import React, { useRef, useMemo } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
 
+const Stars = () => {
+  const starsRef = useRef();
 
+  const starGeometry = useMemo(() => {
+    const geometry = new THREE.BufferGeometry();
+    const starCount = 6000; // Divisible by 3
+    const positions = new Float32Array(starCount);
 
-const Stars = (props) => {
-  const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+    for (let i = 0; i < starCount; i += 3) {
+      positions[i] = (Math.random() - 0.5) * 2000;     // x
+      positions[i + 1] = (Math.random() - 0.5) * 2000; // y
+      positions[i + 2] = (Math.random() - 0.5) * 2000; // z
+    }
 
-  useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    return geometry;
+  }, []);
+
+  useFrame(() => {
+    if (starsRef.current) {
+      starsRef.current.rotation.y += 0.0005;
+    }
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial
-          transparent
-          color='#f272c8'
-          size={0.002}
-          sizeAttenuation={true}
-          depthWrite={false}
-        />
-      </Points>
-    </group>
+    <points ref={starsRef} geometry={starGeometry}>
+      <pointsMaterial color="#ffffff" size={0.5} />
+    </points>
   );
 };
 
-const StarsCanvas = () => {
-  return (
-    <div className='w-full h-auto absolute inset-0 z-[-1]'>
-      <Canvas camera={{ position: [0, 0, 1] }}>
-        <Suspense fallback={null}>
-          <Stars />
-        </Suspense>
-
-        <Preload all />
-      </Canvas>
-    </div>
-  );
-};
+const StarsCanvas = () => (
+  <div className="w-full h-auto absolute inset-0 z-[-1]">
+    <Canvas camera={{ position: [0, 0, 1] }}>
+      <Stars />
+    </Canvas>
+  </div>
+);
 
 export default StarsCanvas;

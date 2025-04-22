@@ -3,7 +3,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { Canvas } from "@react-three/fiber";
 import Stars from "./Stars";
-import EarthCanvas from "./canvas/Earth";
+
 
 const Hero = () => {
   return (
@@ -53,11 +53,6 @@ const Hero = () => {
             className="w-96 h-96 object-cover rounded-lg border-4 border-[#915EFF] shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
-      </div>
-
-      {/* Earth Canvas - Fixed positioning and size */}
-      <div className="absolute top-[250px] right-[18%] z-10 w-[400px] h-[400px]">
-        <EarthCanvas />
       </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10'>
