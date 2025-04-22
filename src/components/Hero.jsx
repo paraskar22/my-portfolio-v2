@@ -55,8 +55,8 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Earth Canvas */}
-      <div className="absolute top-[250px] right-[18%] z-10">
+      {/* Earth Canvas - Fixed positioning and size */}
+      <div className="absolute top-[250px] right-[18%] z-10 w-[400px] h-[400px]">
         <EarthCanvas />
       </div>
 

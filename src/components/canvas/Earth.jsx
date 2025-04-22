@@ -10,7 +10,7 @@ const Earth = () => {
   return (
     <primitive 
       object={earth.scene} 
-      scale={1.5} 
+      scale={2.5} 
       position={[0, 0, 0]}
       rotation-y={0}
     />
@@ -27,7 +27,7 @@ const EarthCanvas = () => {
       shadows
       frameloop="demand"
       dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: true, antialias: true }}
       camera={{
         fov: 45,
         near: 0.1,
@@ -43,6 +43,8 @@ const EarthCanvas = () => {
           minPolarAngle={Math.PI / 2}
           enablePan={false}
         />
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} intensity={1} />
         <Earth />
         <Preload all />
       </Suspense>
