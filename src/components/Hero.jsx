@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { SectionWrapper } from "../hoc";
 
 const Hero = () => {
   return (
@@ -37,9 +37,8 @@ const Hero = () => {
             ease: "easeInOut",
           }}
         >
-          <img 
-            src="/src/assets/vaishaliIMG.jpg"
-            alt="Vaishali Profile"
+          <img src="/vaishaliIMG.jpg" alt="Vaishali" 
+
             className="w-96 h-96 object-cover rounded-lg border-4 border-[#915EFF] shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
@@ -66,4 +65,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default SectionWrapper(Hero, "hero");

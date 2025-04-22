@@ -5,19 +5,36 @@ import CanvasLoader from "../Loader";
 
 // ✅ Earth model component
 const Earth = () => {
-  const earth = useGLTF("/planet/scene.gltf"); // path is correct now
+  try {
+    const earth = useGLTF("/planet/scene.gltf");
+    
+    // Add error checking for the model
+    if (!earth || !earth.scene) {
+      console.error("Failed to load Earth model");
+      return null;
+    }
 
-  // No need to log anymore unless debugging:
-  // console.log("Loaded Earth GLTF:", earth);
-
-  // You can safely return the model directly now:
-  return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
-  );
+    return (
+      <primitive 
+        object={earth.scene} 
+        scale={2.5} 
+        position-y={0} 
+        rotation-y={0}
+        onError={(error) => console.error("Error with Earth primitive:", error)}
+      />
+    );
+  } catch (error) {
+    console.error("Error loading Earth model:", error);
+    return null;
+  }
 };
 
 // ✅ Preload the model outside the component
-useGLTF.preload("/planet/scene.gltf");
+try {
+  useGLTF.preload("/planet/scene.gltf");
+} catch (error) {
+  console.error("Error preloading Earth model:", error);
+}
 
 // ✅ Canvas component that renders the Earth
 const EarthCanvas = () => {
