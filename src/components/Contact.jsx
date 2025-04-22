@@ -21,6 +21,7 @@ const Contact = () => {
       formRef.current,
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
+    
     .then(
       (result) => {
         setLoading(false);
