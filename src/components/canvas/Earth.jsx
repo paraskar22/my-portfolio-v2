@@ -5,50 +5,48 @@ import CanvasLoader from "../Loader";
 
 // Earth model component
 const Earth = () => {
-  try {
-    const earth = useGLTF("/planet/scene.gltf");
-    
-    if (!earth || !earth.scene) {
-      console.error("Failed to load Earth model");
-      return null;
-    }
-
-    return (
-      <primitive 
-        object={earth.scene} 
-        scale={1.5} 
-        position={[0, 0, 0]}
-        rotation-y={0}
-        onError={(error) => console.error("Error with Earth primitive:", error)}
-      />
-    );
-  } catch (error) {
-    console.error("Error loading Earth model:", error);
-    return null;
-  }
+  const earth = useGLTF("/planet/scene.gltf");
+  
+  return (
+    <primitive 
+      object={earth.scene} 
+      scale={1.5} 
+      position={[0, 0, 0]}
+      rotation-y={0}
+    />
+  );
 };
 
 // Preload the model
-try {
-  useGLTF.preload("/planet/scene.gltf");
-} catch (error) {
-  console.error("Error preloading Earth model:", error);
-}
+useGLTF.preload("/planet/scene.gltf");
 
-// Modified EarthCanvas to work with Stars
+// EarthCanvas component
 const EarthCanvas = () => {
   return (
-    <Suspense fallback={<CanvasLoader />}>
-      <OrbitControls
-        autoRotate
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-        enablePan={false}
-      />
-      <Earth />
-      <Preload all />
-    </Suspense>
+    <Canvas
+      shadows
+      frameloop="demand"
+      dpr={[1, 2]}
+      gl={{ preserveDrawingBuffer: true }}
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [-4, 3, 6],
+      }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          autoRotate
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+          enablePan={false}
+        />
+        <Earth />
+        <Preload all />
+      </Suspense>
+    </Canvas>
   );
 };
 

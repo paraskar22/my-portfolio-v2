@@ -8,11 +8,10 @@ import EarthCanvas from "./canvas/Earth";
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
-      {/* 3D Background with Stars and Earth */}
+      {/* 3D Background with Stars */}
       <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 1] }}>
           <Stars />
-          <EarthCanvas />
         </Canvas>
       </div>
 
@@ -54,6 +53,11 @@ const Hero = () => {
             className="w-96 h-96 object-cover rounded-lg border-4 border-[#915EFF] shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
+      </div>
+
+      {/* Earth Canvas */}
+      <div className="absolute top-[250px] right-[18%] z-10">
+        <EarthCanvas />
       </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10'>
