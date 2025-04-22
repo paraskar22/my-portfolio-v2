@@ -3,14 +3,16 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { Canvas } from "@react-three/fiber";
 import Stars from "./Stars";
+import EarthCanvas from "./canvas/Earth";
 
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
-      {/* Stars Background */}
+      {/* 3D Background with Stars and Earth */}
       <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 1] }}>
           <Stars />
+          <EarthCanvas />
         </Canvas>
       </div>
 
