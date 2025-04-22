@@ -5,11 +5,11 @@ import CanvasLoader from "../Loader";
 
 // Earth model component
 const Earth = () => {
-  const earth = useGLTF("/planet/scene.gltf");
+  const { scene } = useGLTF("/planet/scene.gltf");
   
   return (
     <primitive 
-      object={earth.scene} 
+      object={scene} 
       scale={2.5} 
       position={[0, 0, 0]}
       rotation-y={0}
@@ -46,7 +46,6 @@ const EarthCanvas = () => {
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         <Earth />
-        <Preload all />
       </Suspense>
     </Canvas>
   );
