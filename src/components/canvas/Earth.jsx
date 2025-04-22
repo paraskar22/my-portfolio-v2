@@ -5,20 +5,17 @@ import CanvasLoader from "../Loader";
 
 // Earth model component
 const Earth = () => {
-  const { scene } = useGLTF("/planet/scene.gltf");
-  
+  const earth = useGLTF("./planet/scene.gltf");
+
   return (
-    <primitive 
-      object={scene} 
-      scale={2.5} 
+    <primitive
+      object={earth.scene}
+      scale={1.5}
       position={[0, 0, 0]}
-      rotation-y={0}
+      rotation={[0, 0, 0]}
     />
   );
 };
-
-// Preload the model
-useGLTF.preload("/planet/scene.gltf");
 
 // EarthCanvas component
 const EarthCanvas = () => {
@@ -27,7 +24,7 @@ const EarthCanvas = () => {
       shadows
       frameloop="demand"
       dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true, antialias: true }}
+      gl={{ preserveDrawingBuffer: true }}
       camera={{
         fov: 45,
         near: 0.1,
@@ -41,11 +38,9 @@ const EarthCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          enablePan={false}
         />
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={1} />
         <Earth />
+        <Preload all />
       </Suspense>
     </Canvas>
   );
