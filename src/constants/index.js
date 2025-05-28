@@ -134,21 +134,22 @@ const experiences = [
     iconBg: "#383E56",
     date: "Sep 2023 – May 2025",
     points: [
-      "GPA: 3.08 / 4.0",
+      "GPA: 3.07 / 4.0",
     ],
   },
   {
-    title: "Data Science Intern",
+    title: "Full Stack Developer Intern",
     company_name: "SimplexDiam | New York | USA",
     icon: simplex,
     iconBg: "#E6DEDD",
     date: "Jan 2024 – Aug 2024",
     points: [
-      "Developed predictive models to optimize inventory management, reducing overstock by 25%.",
-      "Conducted data cleaning and preprocessing on large datasets, improving model accuracy.",
-      "Designed interactive dashboards in Power BI to visualize key business metrics.",
-      "Implemented NLP-based sentiment analysis to enhance customer insights.",
-      "Automated ETL workflows for real-time data updates, reducing manual processing time by 40%.",
+      "Developed a scalable, user-friendly web application for internal operations using React.js, Node.js, and PostgreSQL.",
+      "Designed and implemented RESTful APIs for seamless data exchange between front-end and back-end services.",
+      "Improved database query performance by 30% through PostgreSQL indexing and query optimization.",
+      "Enhanced UI/UX with React.js, Tailwind CSS, and Material UI, improving user engagement.",
+      "Deployed applications on AWS (EC2, S3, Lambda) for scalability and reliability.",
+      "Collaborated with cross-functional teams using Agile & Scrum methodologies.",
     ],
   },
   {
@@ -158,9 +159,11 @@ const experiences = [
     iconBg: "#383E56",
     date: "Aug 2021 – Jul 2023",
     points: [
-      "Built an AI-powered analytics dashboard for healthcare data visualization.",
-      "Designed REST APIs to integrate machine learning models into web applications.",
-      "Optimized SQL queries to enhance data retrieval performance.",
+      "Developed and maintained responsive full-stack web applications using JavaScript (Node.js, Express.js), Django, and MySQL.",
+      "Designed dynamic, interactive UI components with React.js and Next.js, improving page load speed by 40%.",
+      "Implemented authentication and authorization using Firebase Authentication & JWT tokens.",
+      "Integrated third-party APIs for data synchronization, reducing manual data entry efforts by 50%.",
+      "Conducted unit testing and debugging to ensure bug-free, optimized code.",
     ],
   },
   {
@@ -238,24 +241,25 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "AI-Powered Book Club & Reading Community",
+    name: "Beyond - Book",
     description:
-      "Implemented NLP-based book recommendations and real-time discussion forums using WebSockets. Developed a collaborative reading tracking system with personalized suggestions, Firebase authentication for secure user management, and enhanced user engagement through an intuitive interface.",
+    
+"Developed a community-driven platform featuring AI-based book recommendations, reading progress tracking, and user engagement tools,Implemented real-time chat and discussion forums using Django Channels and WebSockets for seamless interaction.Built personalized dashboards with analytics and visualizations using Chart.js and Recharts to monitor reading habits.Integrated Firebase for secure authentication and Django for backend services and content management.cxwww  Focused on enhancing social reading experiences with scalable architecture and intuitive UI design.",
     tags: [
       {
         name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "Django",
+        name: "React",
         color: "green-text-gradient",
       },
       {
-        name: "PostgreSQL",
+        name: "OpenAI",
         color: "pink-text-gradient",
       },
       {
-        name: "Firebase",
+        name: "Radix UI",
         color: "blue-text-gradient",
       },
     ],

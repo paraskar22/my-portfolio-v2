@@ -47,10 +47,10 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        Masters in computer science with expertise in Python, machine learning, and database management. Experience in developing AI-
-        driven solutions, statistical modeling, and data analytics for processing large-scale datasets. Skilled in Pandas, TensorFlow, SQL, and
-        advanced analytics, with strong capabilities in data visualization and experiment evaluation. Adept at collaborating with cross-functional
-        teams to derive insights and drive data-informed decisions.Let's work together to bring your ideas to life!
+        Innovative Full Stack Developer with hands-on expertise in JavaScript (Node.js, React.js, Express.js) and Python (Django, Flask), as well as robust experience in database management systems including PostgreSQL, MongoDB, and MySQL. 
+        Skilled in building scalable web applications, RESTful APIs, and AI-powered solutions, with a strong emphasis on clean UI/UX design. 
+        Experienced in agile methodologies, cloud infrastructure (AWS), and DevOps practices. Passionate about delivering high-performance, user-centric applications and collaborating with cross-functional teams to create meaningful digital experiences.
+        Let's work together to bring your ideas to life!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
