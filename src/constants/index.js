@@ -243,8 +243,7 @@ const projects = [
   {
     name: "Beyond - Book",
     description:
-    
-"Developed a community-driven platform featuring AI-based book recommendations, reading progress tracking, and user engagement tools,Implemented real-time chat and discussion forums using Django Channels and WebSockets for seamless interaction.Built personalized dashboards with analytics and visualizations using Chart.js and Recharts to monitor reading habits.Integrated Firebase for secure authentication and Django for backend services and content management.cxwww  Focused on enhancing social reading experiences with scalable architecture and intuitive UI design.",
+      "Developed a community-driven platform featuring AI-based book recommendations, reading progress tracking, and user engagement tools,Implemented real-time chat and discussion forums using Django Channels and WebSockets for seamless interaction.Built personalized dashboards with analytics and visualizations using Chart.js and Recharts to monitor reading habits.Integrated Firebase for secure authentication and Django for backend services and content management.Focused on enhancing social reading experiences with scalable architecture and intuitive UI design.",
     tags: [
       {
         name: "React.js",
