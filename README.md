@@ -1,6 +1,6 @@
 # Vaishali Paraskar - Portfolio Website
 
-A modern, interactive portfolio website showcasing my skills, projects, and experience as a Data Analyst. Built with React, Three.js, and Tailwind CSS.
+A modern, interactive portfolio website showcasing my skills, projects, and experience as a Full Stack Developer. Built with React, Three.js, and Tailwind CSS.
 
 ## 🚀 Features
 
