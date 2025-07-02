@@ -28,7 +28,7 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915EFF] text-2xl sm:text-4xl font-bold">Vaishali Paraskar</span>
           </h1>
           <p className="mt-2 text-white-100 text-sm sm:text-base leading-relaxed">
-            I am a Full Stack Developer  <br className="sm:block hidden" />
+            I am a Full Stack Software Engineer   <br className="sm:block hidden" />
             leveraging modern frameworks to build data-driven, AI-enhanced applications with seamless frontend and backend integration.
           </p>
         </div>

@@ -17,29 +17,30 @@ import {
   nirma,
   liu,
   cj,
-  bisag,
   simplex,
-  advantmed,
   pycharm,
   match,
   book,
   movie,
+  custom,
+  probuddy,
+  brik,
 } from "../assets";
 
 export const navLinks = [
   {
     id: "linkedin",
-    icon: "/linkedin.png", // Correct path to your icon image
+    icon: "/linkedin.png", 
     url: "https://www.linkedin.com/in/vaishali-paraskar-23b2691a7/",
   },
   {
     id: "github",
-    icon: "/github.png", // Correct path to your icon image
+    icon: "/github.png", 
     url: "https://github.com/paraskar22",
   },
   {
     id: "email",
-    icon: "/mail.png", // Correct path to your icon image
+    icon: "/mail.png", 
     url: "mailto:paraskar06.vaishali@gmail.com",
   },
   {
@@ -58,15 +59,15 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Full Stack Developer",
+    title: "Full Stack Engineer",
     icon: web,
   },
   {
-    title: "Web Developer",
+    title: "Full Stack Developer Intern ",
     icon: mobile,
   },
   {
-    title: "Intern",
+    title: "Software Developer",
     icon: backend,
   },
   {
@@ -128,6 +129,20 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Full Stack Engineer",
+    company_name: "BRIK Partners INC. | Remote | USA",
+    icon: brik,
+    iconBg: "#708090",
+    date: "Sep 2024 – Present",
+    points: [
+      "Leading backend architecture using Django, Node.js, and MongoDB to build scalable web platforms.",
+      "Integrated Stripe, Firebase, and GraphQL APIs to support e-commerce and SaaS applications.",
+      "Deployed containerized applications with Docker, managed CI/CD via GitHub Actions, and used Terraform for infra provisioning.",
+      "Designed and implemented frontend interfaces using React, Next.js, and Radix UI for performance and accessibility.",
+      "Mentoring junior developers and conducting code reviews to maintain code quality and accelerate delivery."
+    ],
+  },
+  {
     title: "Master of Computer Science",
     company_name: "Long Island University | Brooklyn | NY",
     icon: liu,
@@ -144,41 +159,31 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2024 – Aug 2024",
     points: [
-      "Developed a scalable, user-friendly web application for internal operations using React.js, Node.js, and PostgreSQL.",
-      "Designed and implemented RESTful APIs for seamless data exchange between front-end and back-end services.",
-      "Improved database query performance by 30% through PostgreSQL indexing and query optimization.",
-      "Enhanced UI/UX with React.js, Tailwind CSS, and Material UI, improving user engagement.",
-      "Deployed applications on AWS (EC2, S3, Lambda) for scalability and reliability.",
-      "Collaborated with cross-functional teams using Agile & Scrum methodologies.",
+      "Built internal inventory management and operations dashboard using React.js, Node.js, and PostgreSQL.",
+      "Developed backend APIs with Express.js and deployed microservices on AWS (Lambda,S3).",
+      "Enhanced UI/UX using Tailwind CSS, Material UI, and React hooks, increasing user task efficiency.",
+      "Improved query performance by 30% through PostgreSQL indexing and refactoring.",
+      "Followed agile practices and collaborated across teams for fast-paced feature delivery."
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Advantmed India LLP | Gandhinagar | INDIA",
-    icon: advantmed,
+    title: "Software Developer",
+    company_name: "PRO Buddy | Remote | INDIA",
+    icon: probuddy,
     iconBg: "#383E56",
-    date: "Aug 2021 – Jul 2023",
+    date: "Aug 2019 – Dec 2022",
     points: [
-      "Developed and maintained responsive full-stack web applications using JavaScript (Node.js, Express.js), Django, and MySQL.",
-      "Designed dynamic, interactive UI components with React.js and Next.js, improving page load speed by 40%.",
-      "Implemented authentication and authorization using Firebase Authentication & JWT tokens.",
-      "Integrated third-party APIs for data synchronization, reducing manual data entry efforts by 50%.",
-      "Conducted unit testing and debugging to ensure bug-free, optimized code.",
+       "Developed and maintained scalable full-stack applications using React.js, Next.js, and Node.js, supporting both internal teams and external clients.",
+        "Engineered modular backend services with Express.js and Django REST Framework, processing over 100K API calls per day acrossmicroservices.",
+        "Designed and deployed cloud-based infrastructure on AWS (EC2, S3, Lambda) using Docker containers and CI/CD pipelines with GitHub Actions.",
+        "Built and integrated secure authentication systems with JWT, Firebase Auth, and OAuth2, ensuring data protection and user identity management.",
+        "Improved system performance and scalability by optimizing PostgreSQL queries, implementing Redis caching, and introducing asynchronous job handling.",
+        "Collaborated with UI/UX designers to craft responsive interfaces using Tailwind CSS, Material UI, and component-driven architecture in React.",
+        "Integrated third-party services like Stripe, SendGrid, and Razorpay for billing, notifications, and payments, enhancing platform functionality.",
+        "Led agile sprints, participated in code reviews, and ensured continuous delivery of well-tested features using Jest, PyTest, and best practices such as TDD, BDD, and CI/CD practices."
     ],
   },
-  {
-    title: "Intern - Face Recognition Based Attendance System",
-    company_name: "BISAG-N | Gandhinagar | INDIA",
-    icon: bisag,
-    iconBg: "#708090",
-    date: "Jan 2021 – Apr 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  
   {
     title: "Master of Computer Application",
     company_name: "Nirma University | Ahmedabad | India",
@@ -243,7 +248,7 @@ const projects = [
   {
     name: "Beyond - Book",
     description:
-      "Developed a community-driven platform featuring AI-based book recommendations, reading progress tracking, and user engagement tools,Implemented real-time chat and discussion forums using Django Channels and WebSockets for seamless interaction.Built personalized dashboards with analytics and visualizations using Chart.js and Recharts to monitor reading habits.Integrated Firebase for secure authentication and Django for backend services and content management.Focused on enhancing social reading experiences with scalable architecture and intuitive UI design.",
+      "Developed a community-driven reading platform with AI-powered book recommendations.Implemented real-time chat and forums using Django Channels and WebSockets.Integrated Firebase for authentication and Django for backend services.Created analytics dashboards with Chart.js and Recharts to visualize reading habits.",
     tags: [
       {
         name: "React.js",
@@ -286,6 +291,28 @@ const projects = [
     image: movie,
     source_code_link: "https://github.com/",
   },
+  {
+    name: "E-Commerce Platform for Custom Jewelry",
+    description:
+      "Built a full-featured e-commerce platform with Stripe-based secure checkout, SSR enabled Next.js pages, and MongoDB backend.      Implemented advanced search and filtering using Elasticsearch and aggregation pipelines for personalized product discovery.Designed an admin dashboard for inventory, orders, and analytics with real-time data management.Deployed on Vercel with optimized performance settings, improving SEO and reducing load times by over 40%.",
+      tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Next.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: custom,
+    source_code_link: "https://github.com/",
+  },
+  
 ];
 
 const certifications = [

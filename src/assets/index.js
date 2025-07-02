@@ -27,8 +27,8 @@ import pycharm from "./tech/pycharm.png";
 
 // ========== Company Logos ==========
 import simplex from "./company/simplex.png";
-import advantmed from "./company/advantmed.png";
-import bisag from "./company/bisag.png";
+import brik from "./company/brik.png";
+import probuddy from "./company/probuddy.png";
 import cj from "./company/cj.png";
 import nirma from "./company/nirma.png";
 import liu from "./company/liu.png";
@@ -37,7 +37,7 @@ import liu from "./company/liu.png";
 import match from "./match.png";
 import movie from "./movie.png";
 import book from "./book.png";
-
+import custom from "./custom.png";
 
 
 
@@ -72,8 +72,8 @@ export {
 
   // Companies
   simplex,
-  advantmed,
-  bisag,
+  brik,
+  probuddy,
   cj,
   nirma,
   liu,
@@ -82,4 +82,5 @@ export {
   match,
   movie,
   book,
+  custom,
 };
