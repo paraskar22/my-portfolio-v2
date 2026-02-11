@@ -1,19 +1,23 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { Canvas } from "@react-three/fiber";
-import Stars from "./Stars";
+// Temporarily removed Canvas and Stars
+// import { Canvas } from "@react-three/fiber";
+// import Stars from "./Stars";
+import { useTheme } from "../context/ThemeContext";
 
 
 const Hero = () => {
+  const { theme } = useTheme();
+  
   return (
     <section className={`relative w-full h-screen mx-auto`}>
-      {/* 3D Background with Stars */}
-      <div className="absolute inset-0 z-0">
+      {/* 3D Background with Stars - TEMPORARILY DISABLED */}
+      {/* <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 1] }}>
-          <Stars />
+          <Stars theme={theme} />
         </Canvas>
-      </div>
+      </div> */}
 
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
@@ -23,19 +27,19 @@ const Hero = () => {
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
 
-        <div>
-          <h1 className="text-white text-3xl sm:text-5xl font-semibold">
+        <div className="sm:ml-[35%] md:ml-[40%] lg:ml-[45%] xl:ml-[42%]">
+          <h1 className="hero-title text-3xl sm:text-5xl font-semibold">
             Hi, I'm <span className="text-[#915EFF] text-2xl sm:text-4xl font-bold">Vaishali Paraskar</span>
           </h1>
-          <p className="mt-2 text-white-100 text-sm sm:text-base leading-relaxed">
+          <p className="hero-subtitle mt-2 text-sm sm:text-base leading-relaxed max-w-2xl">
             I am a Full Stack Software Engineer   <br className="sm:block hidden" />
             leveraging modern frameworks to build data-driven, AI-enhanced applications with seamless frontend and backend integration.
           </p>
         </div>
       </div>
 
-      {/* Moved image to the left */}
-      <div className="absolute top-[250px] left-[18%] z-10">
+      {/* Profile Image - Responsive positioning - LEFT SIDE */}
+      <div className="absolute top-[400px] sm:top-[200px] md:top-[180px] left-1/2 sm:left-[15%] md:left-[10%] lg:left-[10%] transform -translate-x-1/2 sm:translate-x-0 z-10">
         <motion.div
           animate={{
             y: [0, -20, 0],
@@ -49,8 +53,8 @@ const Hero = () => {
         >
           <img 
             src="/vaishaliIMG.jpg"
-            alt="Vaishali Profile"
-            className="w-96 h-96 object-cover rounded-lg border-4 border-[#915EFF] shadow-lg hover:scale-105 transition-transform duration-300"
+            alt="Vaishali Paraskar"
+            className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-lg border-4 border-[#915EFF] shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
       </div>

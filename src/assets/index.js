@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import github from "./github.png";
+import linkedin from "./linkedin.png";
 
 // ========== Role Icons ==========
 import backend from "./backend.png";
@@ -13,6 +14,7 @@ import web from "./web.png";
 // ========== Tech Stack Icons ==========
 import python from "./tech/python.png";
 import r from "./tech/r.png";
+import nextjs from "./tech/nextjs.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -26,6 +28,8 @@ import anaconda from "./tech/anaconda.png";
 import pycharm from "./tech/pycharm.png";
 
 // ========== Company Logos ==========
+import paf from "./company/paf.png";
+import saban from "./company/saban.png";
 import simplex from "./company/simplex.png";
 import brik from "./company/brik.png";
 import probuddy from "./company/probuddy.png";
@@ -46,6 +50,7 @@ export {
   // General
   logo,
   github,
+  linkedin,
   menu,
   close,
 
@@ -58,6 +63,7 @@ export {
   // Technologies
   python,
   r,
+  nextjs,
   figma,
   git,
   html,
@@ -71,6 +77,8 @@ export {
   pycharm,
 
   // Companies
+  paf,
+  saban,
   simplex,
   brik,
   probuddy,

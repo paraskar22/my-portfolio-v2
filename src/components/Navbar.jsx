@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaSun, FaMoon, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 // Importing styles and assets
 import { styles } from "../styles";
-import { navLinks } from "../constants";  // Ensure navLinks is correctly imported from your constants file
-import { logo, menu, close } from "../assets";  // Import your logo and menu images from assets
+import { navLinks } from "../constants";
+import { logo, menu, close } from "../assets";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,8 +33,8 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } w-full flex items-center py-5 fixed top-0 z-20 navbar-theme ${
+        scrolled ? "navbar-scrolled" : "bg-transparent"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -45,7 +48,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+          <p className='navbar-title text-[18px] font-bold cursor-pointer flex '>
             Vaishali &nbsp;
             <span className='sm:block hidden'> | Full Stack Software Engineer </span>
           </p>
@@ -56,26 +59,44 @@ const Navbar = () => {
           {navLinks.map((nav) =>
             nav.icon ? (
               <li key={nav.id}>
-                <a href={nav.url} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={nav.icon}
-                    alt={nav.id}
-                    className="w-6 h-6 object-contain hover:scale-110 transition"
-                  />
+                <a 
+                  href={nav.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-tertiary p-2.5 rounded-full hover:bg-[#915EFF] transition-all duration-300 flex items-center justify-center"
+                  aria-label={nav.id}
+                >
+                  {nav.id === 'linkedin' && <FaLinkedin className="text-white text-lg" />}
+                  {nav.id === 'github' && <FaGithub className="text-white text-lg" />}
+                  {nav.id === 'email' && <FaEnvelope className="text-white text-lg" />}
                 </a>
               </li>
             ) : (
               <li
                 key={nav.id}
                 className={`${
-                  active === nav.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                  active === nav.title ? "nav-link-active" : "nav-link"
+                } hover:nav-link-active text-[18px] font-medium cursor-pointer`}
                 onClick={() => setActive(nav.title)}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             )
           )}
+          {/* Theme Toggle Button */}
+          <li>
+            <button
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center hover:bg-[#915EFF] transition-all duration-300"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <FaSun className="text-yellow-400 text-xl" />
+              ) : (
+                <FaMoon className="text-blue-300 text-xl" />
+              )}
+            </button>
+          </li>
         </ul>
 
         {/* Mobile Nav */}
@@ -90,7 +111,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 mobile-menu absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) =>
@@ -100,19 +121,19 @@ const Navbar = () => {
                       href={nav.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="bg-tertiary p-2.5 rounded-full hover:bg-[#915EFF] transition-all duration-300 flex items-center justify-center"
+                      aria-label={nav.id}
                     >
-                      <img
-                        src={nav.icon}
-                        alt={nav.id}
-                        className="w-6 h-6 object-contain"
-                      />
+                      {nav.id === 'linkedin' && <FaLinkedin className="text-white text-lg" />}
+                      {nav.id === 'github' && <FaGithub className="text-white text-lg" />}
+                      {nav.id === 'email' && <FaEnvelope className="text-white text-lg" />}
                     </a>
                   </li>
                 ) : (
                   <li
                     key={nav.id}
                     className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                      active === nav.title ? "text-white" : "text-secondary"
+                      active === nav.title ? "nav-link-active" : "nav-link"
                     }`}
                     onClick={() => {
                       setToggle(!toggle);
@@ -123,6 +144,20 @@ const Navbar = () => {
                   </li>
                 )
               )}
+              {/* Theme Toggle in Mobile Menu */}
+              <li>
+                <button
+                  onClick={toggleTheme}
+                  className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center hover:bg-[#915EFF] transition-all duration-300"
+                  aria-label="Toggle theme"
+                >
+                  {theme === 'dark' ? (
+                    <FaSun className="text-yellow-400 text-xl" />
+                  ) : (
+                    <FaMoon className="text-blue-300 text-xl" />
+                  )}
+                </button>
+              </li>
             </ul>
           </div>
         </div>

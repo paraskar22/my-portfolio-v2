@@ -29,7 +29,7 @@ const ProjectCard = ({
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
-            alt='project_image'
+            alt={`${name} project screenshot`}
             className='w-full h-full object-cover rounded-2xl'
           />
 
@@ -40,7 +40,7 @@ const ProjectCard = ({
             >
               <img
                 src={github}
-                alt='source code'
+                alt='View source code on GitHub'
                 className='w-1/2 h-1/2 object-contain'
               />
             </div>

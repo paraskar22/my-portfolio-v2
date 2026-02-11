@@ -1,28 +1,37 @@
 import { BrowserRouter } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
-
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, Footer } from "./components";
 import Certifications from "/src/components/Certifications.jsx";
+import { ThemeProvider } from "./context/ThemeContext";
+
+// Lazy load Feedbacks
+const Feedbacks = lazy(() => import("./components/Feedbacks"));
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
+    <ThemeProvider>
+      <BrowserRouter>
+        <div className='relative z-0 bg-primary'>
+          <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <Certifications />
+          <Suspense fallback={<div className="h-20" />}>
+            <Feedbacks />
+          </Suspense>
+          <div className='relative z-0'>
+            <Contact />
+          </div>
+          <Footer />
         </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <Certifications />
-        <Feedbacks />
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

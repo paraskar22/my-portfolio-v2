@@ -5,6 +5,7 @@ import {
   web,
   javascript,
   r,
+  nextjs,
   html,
   anaconda,
   reactjs,
@@ -18,6 +19,8 @@ import {
   liu,
   cj,
   simplex,
+  saban,
+  paf,
   pycharm,
   match,
   book,
@@ -25,17 +28,19 @@ import {
   custom,
   probuddy,
   brik,
+  github,
+  linkedin,
 } from "../assets";
 
 export const navLinks = [
   {
     id: "linkedin",
-    icon: "/linkedin.png", 
+    icon: linkedin, 
     url: "https://www.linkedin.com/in/vaishali-paraskar-23b2691a7/",
   },
   {
     id: "github",
-    icon: "/github.png", 
+    icon: github, 
     url: "https://github.com/paraskar22",
   },
   {
@@ -125,9 +130,39 @@ const technologies = [
     name: "r",
     icon: r,
   },
+  {
+    name: "Next.js",
+    icon: nextjs,
+  },
 ];
+  
 
 const experiences = [
+  {
+    title: "Software Developer Intern",
+    company_name: "P&F Solutions. | Intern | Remote,USA",
+    icon: paf,
+    iconBg: "#708090",
+    date: "Jan 2026 – Present",
+    points: [
+      "Supported full-stack development initiatives across modern web technologies.",
+      "Delivered scalable, customer-focused digital solutions.",
+      "Gained hands-on industry experience through real-world projects.",
+    ],
+  },
+  {
+    title: "Data Analyst",
+    company_name: "SabanOnyx INC. | Full Time | New York,USA",
+    icon: saban,
+    iconBg: "#708090",
+    date: "Aug 2025 – Dec 2025",
+    points: [
+      "Analyzed supply chain and logistics data to drive operational efficiency and strategic decisionmaking.",
+      "Developed automated data pipelines and maintained databases integrating ERP, IoT, and third-party logistics data.",
+      "Cleaned, validated, and analyzed multi-source datasets to identify trends and performance gaps.",
+      "Built interactive dashboards and reports tracking KPIs including inventory turnover, shipping efficiency, and vendor performance.",
+    ],
+  },
   {
     title: "Full Stack Engineer",
     company_name: "BRIK Partners INC. | Remote | USA",
@@ -146,7 +181,7 @@ const experiences = [
     title: "Master of Computer Science",
     company_name: "Long Island University | Brooklyn | NY",
     icon: liu,
-    iconBg: "#383E56",
+    iconBg: "#708090",
     date: "Sep 2023 – May 2025",
     points: [
       "GPA: 3.07 / 4.0",
@@ -156,7 +191,7 @@ const experiences = [
     title: "Full Stack Developer Intern",
     company_name: "SimplexDiam | New York | USA",
     icon: simplex,
-    iconBg: "#E6DEDD",
+    iconBg: "#708090",
     date: "Jan 2024 – Aug 2024",
     points: [
       "Built internal inventory management and operations dashboard using React.js, Node.js, and PostgreSQL.",
@@ -170,7 +205,7 @@ const experiences = [
     title: "Software Developer",
     company_name: "PRO Buddy | Remote | INDIA",
     icon: probuddy,
-    iconBg: "#383E56",
+    iconBg: "#708090",
     date: "Aug 2019 – Dec 2022",
     points: [
        "Developed and maintained scalable full-stack applications using React.js, Next.js, and Node.js, supporting both internal teams and external clients.",
@@ -180,7 +215,7 @@ const experiences = [
         "Improved system performance and scalability by optimizing PostgreSQL queries, implementing Redis caching, and introducing asynchronous job handling.",
         "Collaborated with UI/UX designers to craft responsive interfaces using Tailwind CSS, Material UI, and component-driven architecture in React.",
         "Integrated third-party services like Stripe, SendGrid, and Razorpay for billing, notifications, and payments, enhancing platform functionality.",
-        "Led agile sprints, participated in code reviews, and ensured continuous delivery of well-tested features using Jest, PyTest, and best practices such as TDD, BDD, and CI/CD practices."
+        "Led agile sprints, participated in code reviews, and ensured continuous delivery of well-tested features using Jest, PyTest, and best practices such as TDD, BDD, and CI/CD practices.",
     ],
   },
   
@@ -188,7 +223,7 @@ const experiences = [
     title: "Master of Computer Application",
     company_name: "Nirma University | Ahmedabad | India",
     icon: nirma,
-    iconBg: "#383E56",
+    iconBg: "#708090",
     date: "Aug 2019 – Jun 2021",
     points: [
       "GPA: 3.07 / 4.0",
@@ -198,7 +233,7 @@ const experiences = [
     title: "Bachelor of Computer Application",
     company_name: "C.J.Patel College of Computer Application | India",
     icon: cj,
-    iconBg: "#E6DEDD",
+    iconBg: "#708090",
     date: "Oct. 2015 – June 2018",
     points: [
       "GPA: 3.08 / 4.0",
@@ -243,7 +278,7 @@ const projects = [
       },
     ],
     image: match,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/paraskar22/matchmaking-algorithm",
   },
   {
     name: "Beyond - Book",
@@ -258,6 +293,8 @@ const projects = [
         name: "React",
         color: "green-text-gradient",
       },
+      
+
       {
         name: "OpenAI",
         color: "pink-text-gradient",
@@ -268,7 +305,7 @@ const projects = [
       },
     ],
     image: book,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/paraskar22/beyond-book",
   },
   {
     name: "Movie Recommendation System Using Auto Encoders",
@@ -289,7 +326,7 @@ const projects = [
       },
     ],
     image: movie,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/paraskar22/movie-recommendation",
   },
   {
     name: "E-Commerce Platform for Custom Jewelry",
@@ -310,7 +347,7 @@ const projects = [
       },
     ],
     image: custom,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/paraskar22/custom-jewelry-ecommerce",
   },
   
 ];

@@ -3,9 +3,12 @@ import { useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as random from 'maath/random/dist/maath-random.esm';
 
-const Stars = () => {
+const Stars = ({ theme }) => {
   const ref = useRef();
   const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
+  
+  // Bright hot pink stars for light theme, softer pink for dark theme
+  const starColor = theme === 'light' ? '#ff1493' : '#ffa0e0';
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -22,7 +25,7 @@ const Stars = () => {
       >
         <PointMaterial
           transparent
-          color="#ffa0e0"
+          color={starColor}
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}

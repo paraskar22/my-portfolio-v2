@@ -1,6 +1,6 @@
 # Vaishali Paraskar - Portfolio Website
 
-A modern, interactive portfolio website showcasing my skills, projects, and experience as a Full Stack Developer. Built with React, Three.js, and Tailwind CSS.
+A modern, interactive portfolio website showcasing my skills, projects, and experience as a Full Stack Software Engineer. Built with React, Three.js, and Tailwind CSS.
 
 ## 🚀 Features
 
@@ -8,66 +8,89 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 - **Responsive Design**: Fully responsive layout that works on all devices
 - **Modern UI**: Clean and professional design with smooth animations
 - **Interactive Sections**:
+  - Hero with animated profile
   - About Me
-  - Work Experience
-  - Projects
+  - Work Experience Timeline
+  - Projects Showcase
   - Skills & Technologies
-  - Contact Form
+  - Certifications
+  - Contact Form with EmailJS integration
 
 ## 🛠️ Technologies Used
 
 - **Frontend**:
-  - React.js
-  - Three.js
+  - React.js 18
+  - Three.js & React Three Fiber
   - Tailwind CSS
   - Framer Motion
-  - React Three Fiber
-  - React Three Drei
+  - React Parallax Tilt
+  - Vite
+
+- **Backend** (Optional):
+  - Node.js & Express
+  - MongoDB & Mongoose
+  - CORS
 
 ## 📦 Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/paraskar22/my-portfolio.git
+git clone https://github.com/paraskar22/my-portfolio-v2.git
+cd my-portfolio-v2
 ```
 
 2. Install dependencies:
 ```bash
-cd my-portfolio
 npm install
 ```
 
-3. Run the development server:
+3. Create a `.env` file in the root directory:
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 ```
 
-## 🎨 Design
+5. Build for production:
+```bash
+npm run build
+```
 
-- Modern and clean interface
-- Smooth animations and transitions
-- Interactive 3D elements
-- Responsive layout for all screen sizes
+## 🚀 Deployment
+
+Deploy to GitHub Pages:
+```bash
+npm run deploy
+```
 
 ## 📱 Sections
 
-1. **Hero Section**: Introduction with 3D elements
-2. **About**: Professional background and skills
-3. **Experience**: Work history and achievements
-4. **Projects**: Showcase of major projects
-5. **Contact**: Get in touch form
+1. **Hero Section**: Introduction with animated 3D background and profile image
+2. **About**: Professional background and overview
+3. **Experience**: Work history and education timeline
+4. **Tech Stack**: Technologies and tools I work with
+5. **Projects**: Showcase of major projects with descriptions
+6. **Certifications**: Professional certifications and courses
+7. **Contact**: Get in touch form with social media links
 
 ## 🔗 Links
 
-- Portfolio: [Live Site](https://your-portfolio-url.com)
+- Portfolio: [Live Site](https://paraskar22.github.io/my-portfolio-v2)
 - LinkedIn: [Vaishali Paraskar](https://www.linkedin.com/in/vaishali-paraskar-23b2691a7/)
 - GitHub: [paraskar22](https://github.com/paraskar22)
+- Email: paraskar06.vaishali@gmail.com
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is open source and available under the MIT License.
 
 ## 🙏 Acknowledgments
 
-- Thanks to all the open-source libraries and tools used in this project
-- Special thanks to the Three.js and React communities for their amazing work 
+- Three.js community for amazing 3D capabilities
+- React and Vite teams for excellent developer experience
+- EmailJS for contact form functionality 
