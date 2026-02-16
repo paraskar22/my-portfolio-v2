@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-// Temporarily removed Canvas and Stars
-// import { Canvas } from "@react-three/fiber";
-// import Stars from "./Stars";
+import { Canvas } from "@react-three/fiber";
+import Stars from "./Stars";
 import { useTheme } from "../context/ThemeContext";
 
 
@@ -12,12 +11,12 @@ const Hero = () => {
   
   return (
     <section className={`relative w-full h-screen mx-auto`}>
-      {/* 3D Background with Stars - TEMPORARILY DISABLED */}
-      {/* <div className="absolute inset-0 z-0">
+      {/* 3D Background with Stars */}
+      <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 1] }}>
           <Stars theme={theme} />
         </Canvas>
-      </div> */}
+      </div>
 
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}

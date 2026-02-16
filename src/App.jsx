@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, Footer } from "./components";
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, Footer } from "./components";
 import Certifications from "/src/components/Certifications.jsx";
 import { ThemeProvider } from "./context/ThemeContext";
 
@@ -27,6 +27,7 @@ const App = () => {
           </Suspense>
           <div className='relative z-0'>
             <Contact />
+            <StarsCanvas />
           </div>
           <Footer />
         </div>
