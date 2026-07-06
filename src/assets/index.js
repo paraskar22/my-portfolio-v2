@@ -36,6 +36,7 @@ import probuddy from "./company/probuddy.png";
 import cj from "./company/cj.png";
 import nirma from "./company/nirma.png";
 import liu from "./company/liu.png";
+import relic from "./company/relic.png";
 
 // ========== Project Images ==========
 import match from "./match.png";
@@ -85,6 +86,7 @@ export {
   cj,
   nirma,
   liu,
+  relic,
 
   // Projects
   match,

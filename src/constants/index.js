@@ -30,6 +30,7 @@ import {
   brik,
   github,
   linkedin,
+  relic,
 } from "../assets";
 
 export const navLinks = [
@@ -63,6 +64,10 @@ export const navLinks = [
 ];
 
 const services = [
+  {
+    title: "Software Engineer",
+    icon: web,
+  },
   {
     title: "Full Stack Engineer",
     icon: web,
@@ -138,6 +143,21 @@ const technologies = [
   
 
 const experiences = [
+  {
+    title: "Software Engineer",
+    company_name: "Relic Solutions LLC. | Full Time | Remote,USA",
+    icon: relic,
+    iconBg: "#708090",
+    date: "June 2026 – Present",
+    points: [
+      "Develop responsive web applications and reusable UI components using React, Next.js, TypeScript, HTML, CSS, and Tailwind CSS.",
+      "Build and integrate secure Python-based RESTful APIs using Django REST Framework/FastAPI, implementing JWT and OAuth 2.0 authentication.",
+      "Collaborate with Product, UI/UX, QA, and cross-functional teams to translate business requirements into scalable software solutions.",
+      "Implement automated testing and support CI/CD pipelines using PyTest, Jest, GitHub Actions, and Docker to improve application quality and deployment efficiency.",
+      "Deploy and maintain cloud-based applications on AWS, troubleshoot production issues, and optimize application performance.",
+    ],
+  },
+  
   {
     title: "Software Developer Intern",
     company_name: "P&F Solutions. | Intern | Remote,USA",
