@@ -163,7 +163,7 @@ const experiences = [
     company_name: "P&F Solutions. | Intern | Remote,USA",
     icon: paf,
     iconBg: "#708090",
-    date: "Jan 2026 – Present",
+    date: "Jan 2026 – Apr 2026",
     points: [
       "Supported full-stack development initiatives across modern web technologies.",
       "Delivered scalable, customer-focused digital solutions.",
@@ -183,20 +183,7 @@ const experiences = [
       "Built interactive dashboards and reports tracking KPIs including inventory turnover, shipping efficiency, and vendor performance.",
     ],
   },
-  {
-    title: "Full Stack Engineer",
-    company_name: "BRIK Partners INC. | Remote | USA",
-    icon: brik,
-    iconBg: "#708090",
-    date: "Sep 2024 – Present",
-    points: [
-      "Leading backend architecture using Django, Node.js, and MongoDB to build scalable web platforms.",
-      "Integrated Stripe, Firebase, and GraphQL APIs to support e-commerce and SaaS applications.",
-      "Deployed containerized applications with Docker, managed CI/CD via GitHub Actions, and used Terraform for infra provisioning.",
-      "Designed and implemented frontend interfaces using React, Next.js, and Radix UI for performance and accessibility.",
-      "Mentoring junior developers and conducting code reviews to maintain code quality and accelerate delivery."
-    ],
-  },
+  
   {
     title: "Master of Computer Science",
     company_name: "Long Island University | Brooklyn | NY",
@@ -207,26 +194,13 @@ const experiences = [
       "GPA: 3.07 / 4.0",
     ],
   },
-  {
-    title: "Full Stack Developer Intern",
-    company_name: "SimplexDiam | New York | USA",
-    icon: simplex,
-    iconBg: "#708090",
-    date: "Jan 2024 – Aug 2024",
-    points: [
-      "Built internal inventory management and operations dashboard using React.js, Node.js, and PostgreSQL.",
-      "Developed backend APIs with Express.js and deployed microservices on AWS (Lambda,S3).",
-      "Enhanced UI/UX using Tailwind CSS, Material UI, and React hooks, increasing user task efficiency.",
-      "Improved query performance by 30% through PostgreSQL indexing and refactoring.",
-      "Followed agile practices and collaborated across teams for fast-paced feature delivery."
-    ],
-  },
+  
   {
     title: "Software Developer",
     company_name: "PRO Buddy | Remote | INDIA",
     icon: probuddy,
     iconBg: "#708090",
-    date: "Aug 2019 – Dec 2022",
+    date: "May 2021 – Aug 2023",
     points: [
        "Developed and maintained scalable full-stack applications using React.js, Next.js, and Node.js, supporting both internal teams and external clients.",
         "Engineered modular backend services with Express.js and Django REST Framework, processing over 100K API calls per day acrossmicroservices.",
