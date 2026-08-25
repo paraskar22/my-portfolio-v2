@@ -49,13 +49,29 @@ const ChatBot = () => {
     }
   }, [isOpen]);
 
-  const sendMessage = async (text) => {
+  const sendMessage = async (text, isSuggested = false) => {
     const userMsg = text || input.trim();
     if (!userMsg || loading) return;
 
     setInput("");
     setHasError(false);
     setMessages((prev) => [...prev, { role: "user", content: userMsg }]);
+
+    // Suggested questions: AI is temporarily unavailable — show coming soon
+    if (isSuggested) {
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: "assistant",
+            content:
+              "🚧 This feature is currently under construction. I'll be fully operational soon! In the meantime, feel free to use the contact form to reach Vaishali directly.",
+          },
+        ]);
+      }, 600);
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -79,7 +95,8 @@ const ChatBot = () => {
         ...prev,
         {
           role: "assistant",
-          content: "Sorry, I'm having trouble connecting right now. Please try the contact form instead!",
+          content:
+            "🚧 The AI assistant is currently under construction. Please check back soon or use the contact form to get in touch with Vaishali!",
         },
       ]);
     } finally {
@@ -160,7 +177,7 @@ const ChatBot = () => {
                   {SUGGESTED_QUESTIONS.map((q) => (
                     <button
                       key={q}
-                      onClick={() => sendMessage(q)}
+                      onClick={() => sendMessage(q, true)}
                       className="text-left text-[12px] text-[#915EFF] border border-[#915EFF]/30 rounded-xl px-3 py-2 hover:bg-[#915EFF]/10 transition-colors"
                     >
                       {q}
