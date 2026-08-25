@@ -55,7 +55,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className='list-none hidden sm:flex flex-row gap-10 items-center'>
+        <ul className='list-none hidden sm:flex flex-row gap-6 items-center'>
           {navLinks.map((nav) =>
             nav.icon ? (
               <li key={nav.id}>
@@ -76,7 +76,7 @@ const Navbar = () => {
                 key={nav.id}
                 className={`${
                   active === nav.title ? "nav-link-active" : "nav-link"
-                } hover:nav-link-active text-[18px] font-medium cursor-pointer`}
+                } hover:nav-link-active text-[15px] font-medium cursor-pointer`}
                 onClick={() => setActive(nav.title)}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>

@@ -32,6 +32,24 @@ const Footer = () => {
               Experience
             </a>
             <a
+              href="#projects"
+              className="text-secondary hover:text-white transition-colors text-sm"
+            >
+              Projects
+            </a>
+            <a
+              href="#certifications"
+              className="text-secondary hover:text-white transition-colors text-sm"
+            >
+              Certifications
+            </a>
+            <a
+              href="#personal"
+              className="text-secondary hover:text-white transition-colors text-sm"
+            >
+              Personal
+            </a>
+            <a
               href="#contact"
               className="text-secondary hover:text-white transition-colors text-sm"
             >

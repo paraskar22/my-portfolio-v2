@@ -34,6 +34,24 @@ const Hero = () => {
             I am a Full Stack Software Engineer   <br className="sm:block hidden" />
             leveraging modern frameworks to build data-driven, AI-enhanced applications with seamless frontend and backend integration.
           </p>
+
+          {/* CTA Buttons */}
+          <div className="mt-6 flex flex-wrap gap-4">
+            <a
+              href="/Vaishali_Paraskar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-[#915EFF] text-white font-semibold rounded-lg hover:bg-[#7a4fdd] transition-all duration-300 shadow-lg hover:shadow-[#915EFF]/40 hover:scale-105 text-sm sm:text-base"
+            >
+              View Resume
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3 border-2 border-[#915EFF] text-[#915EFF] font-semibold rounded-lg hover:bg-[#915EFF] hover:text-white transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+            >
+              Get In Touch
+            </a>
+          </div>
         </div>
       </div>
 

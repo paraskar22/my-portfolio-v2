@@ -9,6 +9,7 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Footer from "./Footer";
+import Personal from "./Personal";
 
 
 export {
@@ -22,6 +23,7 @@ export {
   Contact,
   CanvasLoader,
   Footer,
+  Personal,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 

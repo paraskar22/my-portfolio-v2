@@ -1,8 +1,9 @@
 import { BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, Footer } from "./components";
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, Footer, Personal } from "./components";
 import Certifications from "/src/components/Certifications.jsx";
+import ChatBot from "./components/ChatBot";
 import { ThemeProvider } from "./context/ThemeContext";
 
 // Lazy load Feedbacks
@@ -22,6 +23,7 @@ const App = () => {
           <Tech />
           <Works />
           <Certifications />
+          <Personal />
           <Suspense fallback={<div className="h-20" />}>
             <Feedbacks />
           </Suspense>
@@ -30,6 +32,7 @@ const App = () => {
             <StarsCanvas />
           </div>
           <Footer />
+          <ChatBot />
         </div>
       </BrowserRouter>
     </ThemeProvider>

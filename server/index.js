@@ -1,22 +1,19 @@
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Middleware
-app.use(cors({ origin: '*' })); // Allow all origins (update for production)
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
-// Routes
-app.use("/api/contact", require("./routes/contact"));
+// Chat route — no DB needed
+app.use("/api/chat", require("./routes/chat"));
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log("✅ MongoDB connected"))
-.catch((err) => console.error("❌ MongoDB error:", err));
+// Contact route — connects to DB lazily only when a request comes in
+app.use("/api/contact", require("./routes/contact"));
 
 // Start server
 app.listen(PORT, () => {

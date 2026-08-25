@@ -58,6 +58,18 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
+  },
+  {
+    id: "personal",
+    title: "Personal",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -65,24 +77,24 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Software Engineer",
+    title: "Frontend Development",
     icon: web,
+    skills: "React.js · Next.js · TypeScript · Tailwind CSS · HTML/CSS",
   },
   {
-    title: "Full Stack Engineer",
-    icon: web,
-  },
-  {
-    title: "Full Stack Developer Intern ",
-    icon: mobile,
-  },
-  {
-    title: "Software Developer",
+    title: "Backend Development",
     icon: backend,
+    skills: "Node.js · Django · FastAPI · REST APIs · Express.js",
   },
   {
-    title: "Reader",
+    title: "Data & ML",
     icon: creator,
+    skills: "Python · Pandas · Scikit-Learn · AutoEncoders · Data Pipelines",
+  },
+  {
+    title: "DevOps & Cloud",
+    icon: mobile,
+    skills: "AWS · Docker · CI/CD · GitHub Actions · PostgreSQL · MongoDB",
   },
 ];
 
@@ -272,7 +284,7 @@ const projects = [
       },
     ],
     image: match,
-    source_code_link: "https://github.com/paraskar22/matchmaking-algorithm",
+    source_code_link: "https://github.com/paraskar22/Advanced-Matchmaking-Algorithm-System",
   },
   {
     name: "Beyond - Book",
@@ -299,51 +311,9 @@ const projects = [
       },
     ],
     image: book,
-    source_code_link: "https://github.com/paraskar22/beyond-book",
+    source_code_link: "https://github.com/paraskar22/BB",
   },
-  {
-    name: "Movie Recommendation System Using Auto Encoders",
-    description:
-      "Created a movie recommendation system using Auto Encoders, applying the Embarrassingly Shallow Auto Encoders algorithm for improved performance. Evaluated across datasets like Netflix and Million Songs.",
-    tags: [
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "MongoDB",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: movie,
-    source_code_link: "https://github.com/paraskar22/movie-recommendation",
-  },
-  {
-    name: "E-Commerce Platform for Custom Jewelry",
-    description:
-      "Built a full-featured e-commerce platform with Stripe-based secure checkout, SSR enabled Next.js pages, and MongoDB backend.      Implemented advanced search and filtering using Elasticsearch and aggregation pipelines for personalized product discovery.Designed an admin dashboard for inventory, orders, and analytics with real-time data management.Deployed on Vercel with optimized performance settings, improving SEO and reducing load times by over 40%.",
-      tags: [
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "MongoDB",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Next.js",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: custom,
-    source_code_link: "https://github.com/paraskar22/custom-jewelry-ecommerce",
-  },
-  
+
 ];
 
 const certifications = [
